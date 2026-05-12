@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://4x7g41pmalj5"]
+
+[ext_resource type="Script" uid="uid://bfokafn3br5ac" path="res://Players/PlayerScript.gd" id="1_fq5u1"]
+[ext_resource type="SpriteFrames" uid="uid://emlyhpup4nal" path="res://Players/Animators/obsidianKnight_sprite_frames.tres" id="2_fq5u1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fq5u1"]
+
+[node name="Player" type="CharacterBody2D" unique_id=316979710 node_paths=PackedStringArray("animator")]
+script = ExtResource("1_fq5u1")
+animator = NodePath("KnightAnimatedSprite2D")
+
+[node name="KnightAnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=380545984]
+position = Vector2(0, -1)
+sprite_frames = ExtResource("2_fq5u1")
+animation = &"Idle_Down"
+autoplay = "Idle_Down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=70797156]
+shape = SubResource("RectangleShape2D_fq5u1")
+
+[connection signal="animation_finished" from="KnightAnimatedSprite2D" to="." method="_on_knight_animated_sprite_2d_animation_finished"]
+[connection signal="frame_changed" from="KnightAnimatedSprite2D" to="." method="_on_knight_animated_sprite_2d_frame_changed"]
