@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ds8yhjh8oeyc6"]
+
+[ext_resource type="SpriteFrames" uid="uid://b06bnp148von7" path="res://Traps/Animations/Pitfall_sprite_frames.tres" id="1_bdc8w"]
+[ext_resource type="Script" uid="uid://ccb1m627p3vgl" path="res://Traps/Scripts/pit_fall_trap.gd" id="1_u3r4e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3r4e"]
+
+[node name="PitFallTrap" type="Area2D" unique_id=2004340986]
+script = ExtResource("1_u3r4e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1546958543]
+shape = SubResource("RectangleShape2D_u3r4e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1502424719]
+sprite_frames = ExtResource("1_bdc8w")

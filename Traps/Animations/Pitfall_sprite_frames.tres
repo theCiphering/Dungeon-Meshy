@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://b06bnp148von7"]
+
+[ext_resource type="Texture2D" uid="uid://1ki2ykm8mgcq" path="res://Assets/Terrain/Free-Version-Lava-Terrain.png" id="1_7j44c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybvqs"]
+atlas = ExtResource("1_7j44c")
+region = Rect2(80, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wn53e"]
+atlas = ExtResource("1_7j44c")
+region = Rect2(64, 112, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybvqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wn53e")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]

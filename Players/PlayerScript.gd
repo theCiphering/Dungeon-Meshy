@@ -4,9 +4,12 @@ class_name PlayerScript
 const TILE_SIZE := 16
 const MOVE_SPEED := 120.0 # fluid feel (NOT 8)
 
+var knockback = false
+var trapped = false
 var moving := false
 var target_position := Vector2.ZERO
 
+var movement_interrupt: Callable = Callable()
 @export var testing = false
 
 var facing : Vector2
@@ -28,6 +31,10 @@ func _physics_process(delta):
 	
 	# FLUID MOVEMENT TOWARD TARGET TILE
 	if moving:
+		
+		if not can_continue_movement():
+			return
+			
 		global_position = global_position.move_toward(
 			target_position,
 			MOVE_SPEED * delta
@@ -36,6 +43,7 @@ func _physics_process(delta):
 		if global_position.distance_to(target_position) < 0.5:
 			global_position = target_position
 			moving = false
+			check_areas_at(global_position)
 
 		return
 
@@ -45,28 +53,19 @@ func _physics_process(delta):
 		facing = dir
 		set_input_animation(dir)
 
-		var next_pos = target_position + dir * TILE_SIZE
-
-		# collision check using real physics query
-		var space = get_world_2d().direct_space_state
-		var query = PhysicsRayQueryParameters2D.create(target_position, next_pos)
-
-		var hit = space.intersect_ray(query)
-
-		if hit.is_empty():
-			target_position = next_pos
-			moving = true
+		try_move(dir)
 	else:
+		knockback = false
 		set_input_animation(Vector2.ZERO)
 
 func update_input():
 	if Input.is_action_just_pressed("Basic_Attack"):
 		handleAttack()
 		return
-	handle("ui_right", Vector2.RIGHT)
-	handle("ui_left", Vector2.LEFT)
-	handle("ui_down", Vector2.DOWN)
-	handle("ui_up", Vector2.UP)
+	handle("Move_Right", Vector2.RIGHT)
+	handle("Move_Left", Vector2.LEFT)
+	handle("Move_Down", Vector2.DOWN)
+	handle("Move_Up", Vector2.UP)
 
 func isBusy() -> bool:
 	if busyActions.find(animator.animation) != -1:
@@ -133,7 +132,74 @@ func attack():
 
 		# optional
 		if body.has_method("get_hit"):
-			body.get_hit(1)
+			body.get_hit(2,global_position)
+
+func try_move(dir: Vector2):
+
+	var steps = int(max(abs(dir.x), abs(dir.y)))
+	if steps == 0:
+		return
+
+	var step_dir = dir.normalized().round()
+	var current = target_position
+
+	for i in steps:
+
+		var next = current + step_dir * TILE_SIZE
+
+		if movement_interrupt.is_valid() and not movement_interrupt.call():
+			break
+
+		if can_move_to(next):
+			current = next
+		else:
+			break
+
+	start_move(current)
+
+
+func start_move(pos: Vector2):
+	target_position = pos
+	moving = true
+
+func can_continue_movement() -> bool:
+	return not trapped
+
+func can_move_to(pos: Vector2) -> bool:
+	var space = get_world_2d().direct_space_state
+
+	var query = PhysicsRayQueryParameters2D.create(
+		target_position,
+		pos
+	)
+
+	var hit = space.intersect_ray(query)
+
+	return hit.is_empty()
+
+func check_areas_at(pos: Vector2):
+	var space = get_world_2d().direct_space_state
+
+	var shape = CircleShape2D.new()
+	shape.radius = 2
+
+	var query = PhysicsShapeQueryParameters2D.new()
+	query.shape = shape
+	query.transform = Transform2D(0, pos)
+	query.collide_with_areas = true
+	query.collide_with_bodies = false
+
+	var results = space.intersect_shape(query)
+	print(results)
+	for r in results:
+		var area = r.collider
+
+		if area.has_method("on_player_land"):
+			area.on_player_land(self)
+
+func get_hit(s : float, p : Vector2):
+	var dir = (global_position - p).normalized().round() * s
+	try_move(dir)
 
 
 func _on_knight_animated_sprite_2d_animation_finished() -> void:
@@ -145,9 +211,6 @@ func _on_knight_animated_sprite_2d_animation_finished() -> void:
 		animator.play("Idle_Right")
 	if facing == Vector2.LEFT:
 		animator.play("Idle_Left")
-
-func get_hit(s : float):
-	pass
 
 func _on_knight_animated_sprite_2d_frame_changed() -> void:
 	if animator.animation.contains("Swing") and animator.frame == 3:
