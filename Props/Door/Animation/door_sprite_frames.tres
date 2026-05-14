@@ -1,0 +1,66 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://b07mnhvfcqbkm"]
+
+[ext_resource type="Texture2D" uid="uid://d1fqetyijhogd" path="res://Assets/Terrain/Cute_Fantasy_Dungeons/Dungeon_2/Dungeon_2_Door_anim.png" id="1_i2pn7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3oyuh"]
+atlas = ExtResource("1_i2pn7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5agr"]
+atlas = ExtResource("1_i2pn7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8jub"]
+atlas = ExtResource("1_i2pn7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g00dg"]
+atlas = ExtResource("1_i2pn7")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7vv3"]
+atlas = ExtResource("1_i2pn7")
+region = Rect2(128, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3oyuh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5agr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8jub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g00dg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7vv3")
+}],
+"loop": false,
+"name": &"default",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3oyuh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5agr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8jub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g00dg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7vv3")
+}],
+"loop": false,
+"name": &"default_fake",
+"speed": 6.0
+}]

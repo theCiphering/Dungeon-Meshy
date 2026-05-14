@@ -5,8 +5,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u3r4e"]
 
-[node name="PitFallTrap" type="Area2D" unique_id=2004340986]
+[node name="PitFallTrap" type="Area2D" unique_id=2004340986 node_paths=PackedStringArray("sprite_animator")]
+collision_layer = 2
 script = ExtResource("1_u3r4e")
+sprite_animator = NodePath("AnimatedSprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1546958543]
 shape = SubResource("RectangleShape2D_u3r4e")

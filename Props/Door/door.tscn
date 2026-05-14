@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dbsitmk15msdb"]
+
+[ext_resource type="Script" uid="uid://ubwuygc7fgx4" path="res://Props/Door/Script/door.gd" id="1_36day"]
+[ext_resource type="SpriteFrames" uid="uid://b07mnhvfcqbkm" path="res://Props/Door/Animation/door_sprite_frames.tres" id="1_213e8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_213e8"]
+size = Vector2(16, 24)
+
+[node name="Door" type="Area2D" unique_id=1679703258 node_paths=PackedStringArray("sprite_animator", "exit")]
+collision_layer = 2
+script = ExtResource("1_36day")
+sprite_animator = NodePath("AnimatedSprite2D")
+exit = NodePath("Exit")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1748899948]
+sprite_frames = ExtResource("1_213e8")
+animation = &"default_fake"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=850467822]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_213e8")
+
+[node name="Exit" type="Marker2D" parent="." unique_id=54658338]
+position = Vector2(0, 20)
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

@@ -1,0 +1,351 @@
+[gd_scene format=3 uid="uid://b60uyo7rj4hh1"]
+
+[ext_resource type="SpriteFrames" uid="uid://3wptennjvge0" path="res://Props/Coin/coin_sprite_frames.tres" id="1_bvqt8"]
+[ext_resource type="Script" uid="uid://0qr81o2wt162" path="res://Props/Coin/coin_2d.gd" id="1_y7uc2"]
+[ext_resource type="Texture2D" uid="uid://ddotbmw51wkla" path="res://Props/Coin/Coin-Shadow-sheet.png" id="2_cd5sa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6stt"]
+size = Vector2(14, 16)
+
+[sub_resource type="Animation" id="Animation_y7uc2"]
+resource_name = "Collect"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -5), Vector2(0, -25)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer:speed_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:speed_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D_Shadow:speed_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3.0, 3.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite2D_Shadow:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.6698632, 0.6698632), Vector2(0.3, 0.3)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimatedSprite2D_Shadow:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bvqt8"]
+resource_name = "Idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -5), Vector2(0, -7), Vector2(0, -5), Vector2(0, -7), Vector2(0, -5), Vector2(0, -7)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer:speed_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:speed_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D_Shadow:speed_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite2D_Shadow:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.6698632, 0.6698632), Vector2(0.6698632, 0.6698632)]
+}
+
+[sub_resource type="Animation" id="Animation_cd5sa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer:speed_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:speed_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D_Shadow:speed_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite2D_Shadow:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.6698632, 0.6698632)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimatedSprite2D_Shadow:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y7uc2"]
+_data = {
+&"Collect": SubResource("Animation_y7uc2"),
+&"Idle": SubResource("Animation_bvqt8"),
+&"RESET": SubResource("Animation_cd5sa")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7uc2"]
+atlas = ExtResource("2_cd5sa")
+region = Rect2(0, 0, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak2yd"]
+atlas = ExtResource("2_cd5sa")
+region = Rect2(16, 0, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qs671"]
+atlas = ExtResource("2_cd5sa")
+region = Rect2(32, 0, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jki5k"]
+atlas = ExtResource("2_cd5sa")
+region = Rect2(48, 0, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqolb"]
+atlas = ExtResource("2_cd5sa")
+region = Rect2(64, 0, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcmie"]
+atlas = ExtResource("2_cd5sa")
+region = Rect2(80, 0, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwmra"]
+atlas = ExtResource("2_cd5sa")
+region = Rect2(96, 0, 16, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jptme"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7uc2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ak2yd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qs671")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jki5k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqolb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcmie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwmra")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Coin" type="Area2D" unique_id=463622100 node_paths=PackedStringArray("animator")]
+script = ExtResource("1_y7uc2")
+animator = NodePath("AnimationPlayer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1434673916]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_l6stt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1297249185]
+editor_description = "Coin artwork came from
+https://merlym.itch.io/coin"
+position = Vector2(0, -5)
+scale = Vector2(0.45617685, 0.45617685)
+sprite_frames = ExtResource("1_bvqt8")
+autoplay = "default"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=299902596]
+libraries/ = SubResource("AnimationLibrary_y7uc2")
+autoplay = &"Idle"
+
+[node name="AnimatedSprite2D_Shadow" type="AnimatedSprite2D" parent="." unique_id=818669942]
+position = Vector2(-0.6410942, 1.6794529)
+scale = Vector2(0.6698632, 0.6698632)
+sprite_frames = SubResource("SpriteFrames_jptme")
+autoplay = "default"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

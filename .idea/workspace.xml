@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8ec9eef4-7fc2-4c0b-88fc-da3b1798ae64" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Free-Version-Lava-Terrain.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain/Free-Version-Lava-Terrain.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Players/PlayerScript.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Players/PlayerScript.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Players/player.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Players/player.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scenes/lavalashy.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/lavalashy.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Traps/Animations/Pitfall_sprite_frames.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Traps/Animations/Pitfall_sprite_frames.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Traps/Scripts/pit_fall_trap.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Traps/Scripts/pit_fall_trap.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Traps/pit_fall_trap.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Traps/pit_fall_trap.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,9 +76,9 @@
       <method v="2" />
     </configuration>
     <configuration name="Editor" type="RunExe" factoryName=".NET Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Godot Game Engine.exe" />
+      <option name="EXE_PATH" value="F:/Desktop/Godot_v4.6.1-stable_win64.exe" />
       <option name="PROGRAM_PARAMETERS" value="--path &quot;./&quot; --editor" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\miguel.rodrigues\RiderProjects\Dungeon-Meshy" />
+      <option name="WORKING_DIRECTORY" value="D:\Documents\dungeon-smashy" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
@@ -86,9 +92,9 @@
       </method>
     </configuration>
     <configuration name="Player" type="RunExe" factoryName=".NET Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Godot Game Engine.exe" />
+      <option name="EXE_PATH" value="F:/Desktop/Godot_v4.6.1-stable_win64.exe" />
       <option name="PROGRAM_PARAMETERS" value="--path &quot;./&quot;" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\miguel.rodrigues\RiderProjects\Dungeon-Meshy" />
+      <option name="WORKING_DIRECTORY" value="D:\Documents\dungeon-smashy" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
@@ -102,9 +108,9 @@
       </method>
     </configuration>
     <configuration name="Editor" type="RunNativeExe" factoryName="Native Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Godot Game Engine.exe" />
+      <option name="EXE_PATH" value="F:/Desktop/Godot_v4.6.1-stable_win64.exe" />
       <option name="PROGRAM_PARAMETERS" value="--path &quot;./&quot; --editor" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\miguel.rodrigues\RiderProjects\Dungeon-Meshy" />
+      <option name="WORKING_DIRECTORY" value="D:\Documents\dungeon-smashy" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />

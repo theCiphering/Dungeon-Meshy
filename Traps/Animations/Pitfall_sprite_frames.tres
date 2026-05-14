@@ -1,20 +1,27 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://b06bnp148von7"]
 
-[ext_resource type="Texture2D" uid="uid://1ki2ykm8mgcq" path="res://Assets/Terrain/Free-Version-Lava-Terrain.png" id="1_7j44c"]
+[ext_resource type="Texture2D" uid="uid://dbglhsb52eqvj" path="res://Assets/Terrain/Cute_Fantasy_Dungeons/Dungeon_2/Dungeon_2.png" id="1_7j44c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ybvqs"]
 atlas = ExtResource("1_7j44c")
-region = Rect2(80, 112, 16, 16)
+region = Rect2(32, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7j44c"]
+atlas = ExtResource("1_7j44c")
+region = Rect2(32, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wn53e"]
 atlas = ExtResource("1_7j44c")
-region = Rect2(64, 112, 16, 16)
+region = Rect2(16, 144, 16, 16)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ybvqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7j44c")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wn53e")
