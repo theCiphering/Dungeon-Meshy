@@ -1,20 +1,21 @@
 extends CharacterBody2D
 class_name PlayerScript
 
-@export_category("Player Score")
-@export var coins : int = 0
-
-
-const TILE_SIZE := 16
+const TILE_SIZE := 8
 const MOVE_SPEED := 60.0 # fluid feel (NOT 8)
 
 var knockback = false
 var trapped = false
 var moving := false
 var target_position := Vector2.ZERO
+var previous_position := Vector2.ZERO
 
 var movement_interrupt: Callable = Callable()
+
+@export_category("Player Properties")
 @export var testing = false
+@export var trap_immune = false
+
 var move_queue: Array[Vector2] = []
 var facing : Vector2
 var held_dirs: Array[Vector2] = []
@@ -25,10 +26,12 @@ var busyActions: Array[String] = ["Swing_Down","Swing_Up","Swing_Right","Swing_L
 @export var sprite_animator : AnimatedSprite2D
 @export var animator : AnimationPlayer
 @export var collidor : CollisionShape2D
+@export var pouch : PlayerPouch
 
 func _ready():
 	target_position = global_position
-
+	previous_position = global_position
+	
 func _physics_process(delta):
 	if not testing:
 		update_input()
@@ -42,7 +45,7 @@ func _physics_process(delta):
 		if global_position.distance_to(target_position) < 0.5:
 			global_position = target_position
 			moving = false
-			check_areas_at(global_position)
+			check_areas_at(global_position, previous_position)
 			if not move_queue.is_empty():
 				start_next_move()
 			elif held_dirs.size() > 0 and not isBusy():
@@ -162,6 +165,7 @@ func try_move(dir: Vector2):
 func start_next_move():
 	if move_queue.is_empty():
 		return
+	previous_position = global_position
 	target_position = move_queue.pop_front()
 	moving = true
 
@@ -215,7 +219,7 @@ func can_move_to(pos: Vector2) -> bool:
 		return false
 	return true
 
-func check_areas_at(pos: Vector2):
+func check_areas_at(pos: Vector2,prev: Vector2):
 	var space = get_world_2d().direct_space_state
 
 	var shape = CircleShape2D.new()
@@ -232,12 +236,16 @@ func check_areas_at(pos: Vector2):
 	for r in results:
 		var area = r.collider
 		if area.has_method("on_player_land"):
-			area.on_player_land(self)
+			area.on_player_land(self, prev)
 
 func get_hit(s : float, p : Vector2):
 	var dir = (global_position - p).normalized().round() * s
 	try_move(dir)
 
+func awaitRespawn():
+	await get_tree().create_timer(5).timeout
+	SpawnAreas.Spawn.spawnMe(self)
+	animator.play("RESET")
 
 func _on_knight_animated_sprite_2d_animation_finished() -> void:
 	if facing == Vector2.DOWN:

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cacrj7cq3h4tn"]
+
+[ext_resource type="Script" uid="uid://dc5l7f8k1in0o" path="res://Manager/windows_manager.gd" id="1_uvv56"]
+
+[node name="WindowsManager" type="Node" unique_id=1193639686]
+script = ExtResource("1_uvv56")

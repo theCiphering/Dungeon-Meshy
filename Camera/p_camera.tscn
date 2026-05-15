@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://b3f7i650dby3e"]
 
+[ext_resource type="Script" uid="uid://kkcw2ov3q7n8" path="res://Camera/Scripts/p_camera.gd" id="1_31lpe"]
+
 [node name="P1_Camera" type="Camera2D" unique_id=905358978]
 offset = Vector2(1.525, 0)
 zoom = Vector2(2, 2)
 limit_left = -9998385
+script = ExtResource("1_31lpe")

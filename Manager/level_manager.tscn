@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dss1mp5hhpt3l"]
+
+[ext_resource type="Script" uid="uid://jch5gfmqdimv" path="res://Manager/level_manager.gd" id="1_fi48q"]
+[ext_resource type="PackedScene" uid="uid://2aeik526gq1m" path="res://Scenes/intro_logo.tscn" id="2_4r3tq"]
+[ext_resource type="PackedScene" uid="uid://4nwy30lvo7gg" path="res://Scenes/main_menu.tscn" id="3_m2bxk"]
+[ext_resource type="PackedScene" uid="uid://bi51t11fyfgx4" path="res://Scenes/TheSewers.tscn" id="4_7e2bg"]
+
+[node name="LevelManager" type="Node" unique_id=513633241]
+script = ExtResource("1_fi48q")
+intro_scene = ExtResource("2_4r3tq")
+main_menu = ExtResource("3_m2bxk")
+canal_dungeon = ExtResource("4_7e2bg")

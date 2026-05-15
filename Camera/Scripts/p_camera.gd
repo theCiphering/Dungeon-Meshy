@@ -40,3 +40,6 @@ func _process(delta):
 		desired_position,
 		follow_speed * delta
 	)
+	
+func setTarget(p):
+	target = p

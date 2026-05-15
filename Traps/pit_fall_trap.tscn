@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://ccb1m627p3vgl" path="res://Traps/Scripts/pit_fall_trap.gd" id="1_u3r4e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u3r4e"]
+size = Vector2(5, 5)
 
 [node name="PitFallTrap" type="Area2D" unique_id=2004340986 node_paths=PackedStringArray("sprite_animator")]
 collision_layer = 2
@@ -11,7 +12,9 @@ script = ExtResource("1_u3r4e")
 sprite_animator = NodePath("AnimatedSprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1546958543]
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_u3r4e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1502424719]
+position = Vector2(0, -2)
 sprite_frames = ExtResource("1_bdc8w")

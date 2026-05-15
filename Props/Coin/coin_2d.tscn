@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ddotbmw51wkla" path="res://Props/Coin/Coin-Shadow-sheet.png" id="2_cd5sa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6stt"]
-size = Vector2(14, 16)
+size = Vector2(10, 6)
 
 [sub_resource type="Animation" id="Animation_y7uc2"]
 resource_name = "Collect"
@@ -79,7 +79,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0.6698632, 0.6698632), Vector2(0.3, 0.3)]
+"values": [Vector2(1, 1), Vector2(1, 1)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -168,7 +168,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0.6698632, 0.6698632), Vector2(0.6698632, 0.6698632)]
+"values": [Vector2(1, 1), Vector2(1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_cd5sa"]
@@ -289,10 +289,6 @@ region = Rect2(64, 0, 16, 8)
 atlas = ExtResource("2_cd5sa")
 region = Rect2(80, 0, 16, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mwmra"]
-atlas = ExtResource("2_cd5sa")
-region = Rect2(96, 0, 16, 8)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_jptme"]
 animations = [{
 "frames": [{
@@ -313,9 +309,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kcmie")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mwmra")
 }],
 "loop": true,
 "name": &"default",
@@ -323,26 +316,30 @@ animations = [{
 }]
 
 [node name="Coin" type="Area2D" unique_id=463622100 node_paths=PackedStringArray("animator")]
+y_sort_enabled = true
 script = ExtResource("1_y7uc2")
 animator = NodePath("AnimationPlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1434673916]
-position = Vector2(0, 3)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_l6stt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1297249185]
 editor_description = "Coin artwork came from
 https://merlym.itch.io/coin"
+y_sort_enabled = true
 position = Vector2(0, -5)
-scale = Vector2(0.45617685, 0.45617685)
+scale = Vector2(0.75, 0.75)
 sprite_frames = ExtResource("1_bvqt8")
 autoplay = "default"
+offset = Vector2(-0.666667, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=299902596]
 libraries/ = SubResource("AnimationLibrary_y7uc2")
 autoplay = &"Idle"
 
 [node name="AnimatedSprite2D_Shadow" type="AnimatedSprite2D" parent="." unique_id=818669942]
+z_index = -1
 position = Vector2(-0.6410942, 1.6794529)
 scale = Vector2(0.6698632, 0.6698632)
 sprite_frames = SubResource("SpriteFrames_jptme")

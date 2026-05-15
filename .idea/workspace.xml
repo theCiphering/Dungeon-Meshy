@@ -6,12 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="8ec9eef4-7fc2-4c0b-88fc-da3b1798ae64" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Cute_Fantasy_Dungeons/Dungeon_2/Dungeon_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain/Cute_Fantasy_Dungeons/Dungeon_2/Dungeon_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Cute_Fantasy_Dungeons/Dungeon_2/Dungeon_2_Arch_small.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain/Cute_Fantasy_Dungeons/Dungeon_2/Dungeon_2_Arch_small.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Cute_Fantasy_Dungeons/Dungeon_2/Dungeon_2_Sewer_Tileset.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain/Cute_Fantasy_Dungeons/Dungeon_2/Dungeon_2_Sewer_Tileset.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Cute_Fantasy_Dungeons/Objects/Dungeon_Objects.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain/Cute_Fantasy_Dungeons/Objects/Dungeon_Objects.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_tile_set.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain/Terrain_tile_set.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Camera/Scripts/p_camera.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Camera/Scripts/p_camera.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Camera/p_camera.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Camera/p_camera.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Players/PlayerScript.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Players/PlayerScript.gd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Players/player.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Players/player.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/lavalashy.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/lavalashy.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Traps/Animations/Pitfall_sprite_frames.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Traps/Animations/Pitfall_sprite_frames.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Props/Coin/coin_2d.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Props/Coin/coin_2d.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Props/Coin/coin_2d.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Props/Coin/coin_2d.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Props/Coin/coin_sprite_frames.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Props/Coin/coin_sprite_frames.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Props/Door/door.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Props/Door/door.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/TheSewers.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/TheSewers.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Traps/Scripts/pit_fall_trap.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Traps/Scripts/pit_fall_trap.gd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Traps/pit_fall_trap.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Traps/pit_fall_trap.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viewport/Scripts/sub_viewport.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Viewport/Scripts/sub_viewport.gd.uid" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,9 +88,9 @@
       <method v="2" />
     </configuration>
     <configuration name="Editor" type="RunExe" factoryName=".NET Executable">
-      <option name="EXE_PATH" value="F:/Desktop/Godot_v4.6.1-stable_win64.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Godot Game Engine.exe" />
       <option name="PROGRAM_PARAMETERS" value="--path &quot;./&quot; --editor" />
-      <option name="WORKING_DIRECTORY" value="D:\Documents\dungeon-smashy" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\miguel.rodrigues\RiderProjects\Dungeon-Meshy" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
@@ -92,9 +104,9 @@
       </method>
     </configuration>
     <configuration name="Player" type="RunExe" factoryName=".NET Executable">
-      <option name="EXE_PATH" value="F:/Desktop/Godot_v4.6.1-stable_win64.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Godot Game Engine.exe" />
       <option name="PROGRAM_PARAMETERS" value="--path &quot;./&quot;" />
-      <option name="WORKING_DIRECTORY" value="D:\Documents\dungeon-smashy" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\miguel.rodrigues\RiderProjects\Dungeon-Meshy" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
@@ -108,9 +120,9 @@
       </method>
     </configuration>
     <configuration name="Editor" type="RunNativeExe" factoryName="Native Executable">
-      <option name="EXE_PATH" value="F:/Desktop/Godot_v4.6.1-stable_win64.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Godot Game Engine.exe" />
       <option name="PROGRAM_PARAMETERS" value="--path &quot;./&quot; --editor" />
-      <option name="WORKING_DIRECTORY" value="D:\Documents\dungeon-smashy" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\miguel.rodrigues\RiderProjects\Dungeon-Meshy" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
@@ -127,6 +139,8 @@
       <updated>1778628781016</updated>
       <workItem from="1778628782300" duration="331000" />
       <workItem from="1778671279506" duration="1974000" />
+      <workItem from="1778835592576" duration="290000" />
+      <workItem from="1778851770588" duration="798000" />
     </task>
     <task id="LOCAL-00001" summary="Dungeon Meshy">
       <option name="closed" value="true" />

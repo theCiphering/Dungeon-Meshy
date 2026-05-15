@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://h72cfl8xakue" path="res://Props/Coin/Coin-4.png" id="4_yifru"]
 [ext_resource type="Texture2D" uid="uid://n4wti2ww7vn4" path="res://Props/Coin/Coin-5.png" id="5_kytdw"]
 [ext_resource type="Texture2D" uid="uid://dys0mno0rlsu1" path="res://Props/Coin/Coin-6.png" id="6_n0jfo"]
-[ext_resource type="Texture2D" uid="uid://bboa2kai4ia5e" path="res://Props/Coin/Coin-7.png" id="7_2d57p"]
 
 [resource]
 animations = [{
@@ -28,9 +27,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_n0jfo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_2d57p")
 }],
 "loop": true,
 "name": &"default",

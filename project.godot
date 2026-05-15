@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Dungeon Smashy"
-run/main_scene="uid://bi51t11fyfgx4"
+run/main_scene="uid://dya8y0c44ek6q"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

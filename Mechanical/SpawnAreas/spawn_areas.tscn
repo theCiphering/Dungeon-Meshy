@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://i2k2soyeh7eh"]
+
+[ext_resource type="Script" uid="uid://cb5fxls6jvcf4" path="res://Mechanical/SpawnAreas/spawn_areas.gd" id="1_s0sx5"]
+
+[node name="SpawnAreas" type="Node2D" unique_id=1827609472]
+script = ExtResource("1_s0sx5")

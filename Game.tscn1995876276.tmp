@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dya8y0c44ek6q"]
+
+[ext_resource type="PackedScene" uid="uid://u3ebcr28em62" path="res://Manager/general_manager.tscn" id="1_xkndl"]
+[ext_resource type="PackedScene" uid="uid://4x7g41pmalj5" path="res://Players/player.tscn" id="3_joorw"]
+[ext_resource type="PackedScene" uid="uid://c7p57gayvkb0m" path="res://Manager/player_manager.tscn" id="3_sb48q"]
+[ext_resource type="PackedScene" uid="uid://cacrj7cq3h4tn" path="res://Manager/windows_manager.tscn" id="5_3mrqo"]
+[ext_resource type="PackedScene" uid="uid://b5q3tncidsluw" path="res://Manager/input_manager.tscn" id="5_r0x5m"]
+[ext_resource type="PackedScene" uid="uid://2aeik526gq1m" path="res://Scenes/intro_logo.tscn" id="5_t88pq"]
+[ext_resource type="PackedScene" uid="uid://djhyiycgdff52" path="res://Manager/game_canvas_layer.tscn" id="6_joorw"]
+[ext_resource type="PackedScene" uid="uid://dss1mp5hhpt3l" path="res://Manager/level_manager.tscn" id="7_3mrqo"]
+
+[node name="TheGame" type="Node" unique_id=120618789]
+
+[node name="GeneralManager" parent="." unique_id=446434829 instance=ExtResource("1_xkndl")]
+
+[node name="PlayerManager" parent="GeneralManager" unique_id=1182521129 instance=ExtResource("3_sb48q")]
+playerCharacter = ExtResource("3_joorw")
+
+[node name="InputManager" parent="GeneralManager" unique_id=308998045 instance=ExtResource("5_r0x5m")]
+
+[node name="LevelManager" parent="GeneralManager" unique_id=513633241 instance=ExtResource("7_3mrqo")]
+
+[node name="WindowsManager" parent="GeneralManager" unique_id=1193639686 instance=ExtResource("5_3mrqo")]
+
+[node name="GameCanvasLayer" parent="." unique_id=1021591257 instance=ExtResource("6_joorw")]
+layer = 100
+
+[node name="Intro Logo" parent="." unique_id=105528241 instance=ExtResource("5_t88pq")]
+
+[node name="Players" type="Node" parent="." unique_id=1936765475]

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b5q3tncidsluw"]
+
+[ext_resource type="Script" uid="uid://dff1ap3qs31a7" path="res://Managers/input_manager.gd" id="1_3e63b"]
+
+[node name="InputManager" type="Node" unique_id=308998045]
+script = ExtResource("1_3e63b")
